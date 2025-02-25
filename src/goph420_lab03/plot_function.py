@@ -1,7 +1,8 @@
 import numpy as np 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 
-
+#S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
+#S = (0.25 * f) * (2k + 1)
     
 def Fz(Z, f):
    # densities in kg/m^3
@@ -18,5 +19,3 @@ def Fz(Z, f):
 
 
 
-
-pass
