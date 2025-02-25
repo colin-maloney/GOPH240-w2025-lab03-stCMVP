@@ -38,13 +38,16 @@ def asymptote_finder():
     # Initialize variables
     S_list = []
     k = 0  # Start from 0
-    f = 0.1
-    step = S_max / 100  # Define a small step size to increment k
+    f = 1
+    step = 1  # Define a small step size to increment k
     print(S_max)
 
     while k <= S_max:
-        S = (0.25 * f) * (2 * k + 1)
-        S_list.append(S)
+        S = (0.25 * 1/f) * (2 * k + 1)
+        if S > S_max:
+            break
+        else:
+            S_list.append(S)
         k += step  # Increment k
 
     return S_list  # Return the computed values
