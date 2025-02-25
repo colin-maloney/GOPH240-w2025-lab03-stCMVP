@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt
 
 #S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
@@ -18,26 +18,41 @@ def Fz(Z, f):
    return np.tan(2 * np.pi() * f * Z) - (p2 / p1) * np.sqrt((H**2) * (B1 **2 - B2 **2) -Z **2) / Z
 
 
-def asymptote_finder(): 
-    # densities in kg/m^3
+import numpy as np
+
+def asymptote_finder():
+    # Densities in kg/m^3
     p1 = 1800
     p2 = 2500
 
-    # velocities in m/s
+    # Velocities in m/s
     B1 = 1900
     B2 = 3200
 
-    # thicknesses in m
-    H = 4000 
-        
+    # Thickness in m
+    H = 4000
+
+    # Compute S_max
     S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
 
+    # Initialize variables
     S_list = []
-    k = np.linspace(0,S_max)
+    k = 0  # Start from 0
     f = 0.1
+    step = S_max / 100  # Define a small step size to increment k
+    print(S_max)
+
     while k <= S_max:
-        S = (0.25 * f) * (2*k + 1)
+        S = (0.25 * f) * (2 * k + 1)
         S_list.append(S)
-    return S_list
+        k += step  # Increment k
+
+    return S_list  # Return the computed values
+
+# Call the function
+result = asymptote_finder()
+
+print(result)
+
 
 
