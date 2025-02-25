@@ -33,14 +33,11 @@ def asymptote_finder():
     S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
 
     S_list = []
-
-    while True:
-        k = 0
+    k = np.linspace(0,S_max)
+    f = 0.1
+    while k <= S_max:
         S = (0.25 * f) * (2*k + 1)
-        if S > S_max:
-            break
-        k += 1
-        S_list.append(S)     
+        S_list.append(S)
     return S_list
 
-    
+
