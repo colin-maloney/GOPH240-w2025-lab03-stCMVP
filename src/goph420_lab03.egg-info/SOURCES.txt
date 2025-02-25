@@ -5,6 +5,9 @@ src/goph420_lab03.egg-info/PKG-INFO
 src/goph420_lab03.egg-info/SOURCES.txt
 src/goph420_lab03.egg-info/dependency_links.txt
 src/goph420_lab03.egg-info/requires.txt
+<<<<<<< HEAD
+src/goph420_lab03.egg-info/top_level.txt
+=======
 src/goph420_lab03.egg-info/top_level.txt
 src/goph420_lab03/venv/Lib/site-packages/pip/__init__.py
 src/goph420_lab03/venv/Lib/site-packages/pip/__main__.py
@@ -428,3 +431,4 @@ src/goph420_lab03/venv/Lib/site-packages/pip/_vendor/urllib3/util/ssltransport.p
 src/goph420_lab03/venv/Lib/site-packages/pip/_vendor/urllib3/util/timeout.py
 src/goph420_lab03/venv/Lib/site-packages/pip/_vendor/urllib3/util/url.py
 src/goph420_lab03/venv/Lib/site-packages/pip/_vendor/urllib3/util/wait.py
+>>>>>>> 05012c63e19b6b6b353ed1df976229e9f48eb904
