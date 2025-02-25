@@ -14,6 +14,9 @@ def main_function(x):
     # thicknesses in m
     H = 4000
     
+   def Fz(p1, p2, B1, B2, f, Z): = np.tan(2*np.pi()*f*Z) - (p2 / p1) * np.sqrt((H**2) * (B1 **2 - B2 **2) -Z **2) / Z 
     
+    return Fz
     
-    pass
+  
+pass
