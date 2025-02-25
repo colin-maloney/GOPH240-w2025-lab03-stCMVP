@@ -18,4 +18,6 @@ def Fz(Z, f):
    return np.tan(2 * np.pi() * f * Z) - (p2 / p1) * np.sqrt((H**2) * (B1 **2 - B2 **2) -Z **2) / Z
 
 
+def asymptote_finder(): 
 
+    pass
