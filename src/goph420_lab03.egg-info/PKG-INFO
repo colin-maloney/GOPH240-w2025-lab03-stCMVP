@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: goph420_lab03
+Version: 0.0.1
+Summary: An example Python package
+Author-email: Viktor Pejic <viktor.pejic@ucalgary.ca>, Colin Maloney <colin.maloney@ucalgary.ca>
+Project-URL: Homepage, https://github.com/colin-maloney/GOPH240-w2025-lab03-stCMVP.git
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# GOPH240-w2025-lab03-stCMVP
