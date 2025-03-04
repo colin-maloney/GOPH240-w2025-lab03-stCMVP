@@ -28,6 +28,7 @@ def root_newton_raphson(x0, f, dfdx, tol=5e-6, max_iter=100):
 
        x_new = x - fx/dfx 
 
-       if abs(x_new - x) < tol: 
+    if abs(x_new - x) < tol: 
             return x_new 
-    raise ValueError(f"Root not found within {max_iter} iterations")
+    else:
+        raise ValueError(f"Root not found within {max_iter} iterations")

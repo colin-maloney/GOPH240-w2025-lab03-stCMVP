@@ -7,7 +7,7 @@ def Fx(x):
 def dFx(x): 
     return 2*x 
 
-root_newton_raphson(1.5, Fx, dFx) 
+root_newton_raphson(1, Fx, dFx) 
 # Call the function 
-result = root_newton_raphson(1.5, Fx, dFx) 
+result = root_newton_raphson(1, Fx, dFx) 
 print(result)
