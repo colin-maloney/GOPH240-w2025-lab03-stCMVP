@@ -17,9 +17,6 @@ def Fz(Z, f):
    H = 4000
    return np.tan(2 * np.pi() * f * Z) - (p2 / p1) * np.sqrt((H**2) * (B1 **2 - B2 **2) -Z **2) / Z
 
-
-import numpy as np
-
 def asymptote_finder():
     # Densities in kg/m^3
     p1 = 1800
@@ -56,6 +53,8 @@ def asymptote_finder():
 result = asymptote_finder()
 
 print(result)
+
+# Plot the function 
 
 
 
