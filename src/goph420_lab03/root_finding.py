@@ -16,12 +16,13 @@ def root_newton_raphson(x0, f, dfdx):
     x: float 
         The root of the function   
     """
-    x = x0 
+    x = x0
+
     for j, xj in enumerate(x): 
         x[j+1] = x[j] - f(x[j]) / dfdx(x[j])  
     if np.allclose(x[j+1], x[j]): 
         return x[j+1] 
-    else:
+    elif j == 100:
         return ValueError("Root not found, try another initial guess") 
     
    
