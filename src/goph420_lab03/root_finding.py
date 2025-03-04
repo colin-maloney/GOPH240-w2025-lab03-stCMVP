@@ -17,12 +17,9 @@ def root_newton_raphson(x0, f, dfdx):
         The root of the function   
     """
     x = x0
-
-    for j, xj in enumerate(x): 
-        x[j+1] = x[j] - f(x[j]) / dfdx(x[j])  
-    if np.allclose(x[j+1], x[j]): 
-        return x[j+1] 
-    elif j == 100:
-        return ValueError("Root not found, try another initial guess") 
-    
-   
+    tol = 5e-6 
+    max_iter = 100 
+    for i in range(max_iter): 
+        x = x - f(x)/dfdx(x) 
+        if np.abs(f(x)) < tol: 
+            break
