@@ -21,14 +21,14 @@ def root_newton_raphson(x0, f, dfdx, tol=5e-6, max_iter=100):
         The root of the function   
     """
     x = x0 
-
-    for i in range(max_iter): 
-       fx =f(x) 
-       dfx = dfdx(x) 
-
-       x_new = x - fx/dfx 
-
-    if abs(x_new - x) < tol: 
-            return x_new 
-    else:
-        raise ValueError(f"Root not found within {max_iter} iterations")
+    eps_a = 1.0 
+    iter = 0 
+    while eps_a > tol and iter < max_iter: 
+        dx = -f(x)/dfdx(x)
+        x += dx 
+        eps_a = np.abs(dx/x) 
+        iter += 1
+        
+    if iter >= max_iter and eps_a > tol:
+        print(f"{iter} iterations completed with a relative error of {eps_a}") 
+    return x
