@@ -27,35 +27,35 @@ def main():
         def Fz(Z): 
             return (p2 / p1) * np.sqrt((H ** 2) * (B1 ** -2 - B2 ** -2) - Z ** 2) / Z - np.tan(2 * np.pi * f * Z)
     
-    # find asympototes 
-    atotes = [0.0] 
-    a = 0.0 
-    k = 0
-    while k <= S_max:
-        a = (0.25 * 1/f) * (2 * k + 1)
-        if a < S_max:
-            atotes.append(a)
-        k += 1
-    atotes.append(S_max) 
-    n = len(atotes)
+        # find asympototes 
+        atotes = [0.0] 
+        a = 0.0 
+        k = 0
+        while k <= S_max:
+            a = (0.25 * 1/f) * (2 * k + 1)
+            if a < S_max:
+                atotes.append(a)
+            k += 1
+        atotes.append(S_max) 
+        n = len(atotes)
 
-    # plot the function 
-    plt.subplot(nf, 1, j+1)
-    for k, ak in enumerate(atotes): 
-        # plot the asymptotes 
-        if k and k < n - 1:
-            plt.plot([ak, ak], [-5, 5], '--b') 
         # plot the function 
-        if k < n-1:
-            zp = np.linspace(ak + 1e-3, atotes[k+1] - 1e-3)
-            Fp = Fz(zp)
-            plt.plot(zp, Fp, '-r') 
-    plt.grid() 
-    plt.xlabel('Zeta') 
-    plt.ylabel('F(zeta)') 
-    plt.xlim(0, S_max)
-    plt.ylim(-5, 5) 
-plt.show()
+        plt.subplot(nf, 1, j+1)
+        for k, ak in enumerate(atotes): 
+            # plot the asymptotes 
+            if k and k < n - 1:
+                plt.plot([ak, ak], [-5, 5], '--b') 
+            # plot the function 
+            if k < n-1:
+                zp = np.linspace(ak + 1e-3, atotes[k+1] - 1e-3)
+                Fp = Fz(zp)
+                plt.plot(zp, Fp, '-r') 
+        plt.grid() 
+        plt.xlabel('Zeta') 
+        plt.ylabel('F(zeta)') 
+        plt.xlim(0, S_max)
+        plt.ylim(-5, 5) 
+    plt.show()
 
 if __name__ == "__main__": 
     main()
