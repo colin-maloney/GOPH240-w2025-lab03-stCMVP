@@ -1,5 +1,6 @@
 README.md
 pyproject.toml
+src/goph420_lab03/__init__.py
 src/goph420_lab03/plot_function.py
 src/goph420_lab03/root_finding.py
 src/goph420_lab03.egg-info/PKG-INFO
