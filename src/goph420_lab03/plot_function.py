@@ -43,11 +43,11 @@ def main():
         plt.subplot(nf, 1, j+1)
         for k, ak in enumerate(atotes): 
             # plot the asymptotes 
-            if k and k < n - 1:
+            if k <= n - 1:
                 plt.plot([ak, ak], [-5, 5], '--b') 
             # plot the function 
             if k < n-1:
-                zp = np.linspace(ak + 1e-3, atotes[k+1] - 1e-3)
+                zp = np.linspace(ak + 1e-3, atotes[k+1] - 1e-3, 1000)
                 Fp = Fz(zp)
                 plt.plot(zp, Fp, '-r') 
         plt.grid() 
