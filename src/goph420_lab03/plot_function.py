@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
-#S = (0.25 * f) * (2k + 1)
 def main(): 
     # Densities in kg/m^3
     p1 = 1800
@@ -26,7 +24,7 @@ def main():
     for j, f in enumerate(freq): 
         # define the function Fz 
         def Fz(Z): 
-            return (p2 / p1) * np.sqrt((H ** 2) * (B1 ** -2 - B2 ** -2) - Z ** 2) / Z - np.tan(2 * np.pi * f * Z)
+            return ((p2 / p1) * np.sqrt((H ** 2) * (B1 ** -2 - B2 ** -2) - Z ** 2) / Z) - np.tan(2 * np.pi * f * Z)
     
         # find asympototes 
         atotes = [0.0] 
