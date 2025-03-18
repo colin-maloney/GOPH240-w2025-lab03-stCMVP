@@ -63,9 +63,6 @@ def main():
     plt.subplots_adjust(hspace=0.5)
     plt.show() 
 
-    # find the roots 
-    for f in freq:
-      
 
 if __name__ == "__main__":
     main()
