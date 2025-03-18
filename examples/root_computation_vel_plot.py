@@ -27,7 +27,6 @@ def main():
                 atotes.append(a)
             k += 1
         atotes.append(S_max)
-        n = len(atotes)
         return atotes
 
     S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
@@ -60,7 +59,7 @@ def main():
         for k, mode in enumerate(root_modes):
             if k < len(roots):
                 mode.append(roots[k])
-    print(root_modes)
+    #print(root_modes)
 
     root_modes = np.array(root_modes, dtype=object)
 
@@ -74,23 +73,10 @@ def main():
 
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('c_L Values')
+    plt.title('Velocity vs Frequency for Modes 0, 1, 2', weight='bold')
+    plt.grid()
     plt.legend()
-    plt.show()
-    plt.savefig('figures/mode_velocity.png')
-
-    wavelength0 = [(c_L0 / f) for f in freq]
-    wavelength1 = [(c_L1 / f) for f in freq[1:]]
-    wavelength2 = [(c_L2 / f) for f in freq[2:]]
-
-
-
-
-
-
-
-
-
-
+    plt.savefig('../figures/mode_velocity.png')
 
 
 if __name__ == '__main__':
