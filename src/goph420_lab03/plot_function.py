@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+ 
 
 
 def main():
@@ -34,13 +35,15 @@ def main():
         atotes = [0.0]
         a = 0.0
         k = 0
-        while k < S_max:
+        while a < S_max:
             a = (0.25 * 1 / f) * (2 * k + 1)
             if a < S_max:
                 atotes.append(a)
             k += 1
         atotes.append(S_max)
         n = len(atotes)
+
+        print(f"asympototes: {atotes}")    
 
         # plot the function
         ax = axs[j]  # Get the specific subplot axis
@@ -58,7 +61,9 @@ def main():
     fig.text(0.5, 0.04, 'Zeta', ha='center', fontsize=12)
     fig.text(0.04, 0.5, 'F(zeta)', va='center', rotation='vertical', fontsize=12)
     plt.subplots_adjust(hspace=0.5)
-    plt.show()
+    plt.show() 
+
+    
 
 
 if __name__ == "__main__":
