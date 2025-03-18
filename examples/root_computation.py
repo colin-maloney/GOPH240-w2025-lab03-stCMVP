@@ -15,8 +15,6 @@ def main():
 
     freq = [0.1, 0.5, 1.0, 1.5, 2.0]
 
-    f = freq[0]
-
     def F(Z):
         C = (H ** 2) * (B1 ** -2 - B2 ** -2)
         return (((p2 / p1) * np.sqrt(C - Z ** 2) / Z)
@@ -26,15 +24,23 @@ def main():
         return ((-(p2/p1) * C/(Z**2 * np.sqrt(C - Z ** 2)))
                 - 2*np.pi*f*(1/np.cos(2*np.pi*f*Z))**2)
 
-    #Frequency = 0.1
-    x0 = 1.1
-    root1, iter, error = root_newton_raphson(x0, F, dfdz)
-    print("For frequency 0.1")
-    print("="*40)
-    print(f"Root: {root1:.6}")
-    print(f"Iteration: {iter}")
-    print(f"Rel. Error: {error}")
-    print("="*40)
+def asymptotes(f,H,B1,B2):
+    atotes = [0.0]
+    a = 0.0
+    k = 0
+    S_max = np.sqrt(H ** 2 * (B1 ** -2 - B2 ** -2))
+    while a < S_max:
+        a = (0.25 * 1 / f) * (2 * k + 1)
+        if a < S_max:
+            atotes.append(a)
+        k += 1
+    atotes.append(S_max)
+    n = len(atotes)
+    return atotes
+
+    for k, fk in enumerate(freq):
+
+
 
 if __name__ == '__main__':
     main()
