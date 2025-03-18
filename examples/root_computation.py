@@ -15,15 +15,6 @@ def main():
 
     freq = [0.1, 0.5, 1.0, 1.5, 2.0]
 
-    def F(Z):
-        C = (H ** 2) * (B1 ** -2 - B2 ** -2)
-        return (((p2 / p1) * np.sqrt(C - Z ** 2) / Z)
-                - np.tan(2 * np.pi * f * Z))
-    def dfdz(Z):
-        C = (H ** 2) * (B1 ** -2 - B2 ** -2)
-        return ((-(p2/p1) * C/(Z**2 * np.sqrt(C - Z ** 2)))
-                - 2*np.pi*f*(1/np.cos(2*np.pi*f*Z))**2)
-
     def get_asymptotes(f,H,B1,B2):
         atotes = [0.0]
         a = 0.0
