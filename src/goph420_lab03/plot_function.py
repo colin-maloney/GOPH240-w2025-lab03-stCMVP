@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
- 
+from  goph420_lab03.root_finding import root_newton_raphson
 
 
 def main():
@@ -63,8 +63,9 @@ def main():
     plt.subplots_adjust(hspace=0.5)
     plt.show() 
 
-    
-
+    # find the roots 
+    for f in freq:
+      
 
 if __name__ == "__main__":
     main()
