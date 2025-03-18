@@ -1,5 +1,6 @@
 from goph420_lab03.root_finding import root_newton_raphson
 import numpy as np
+import matplotlib.pyplot as plt
 
 def main():
     # Densities in kg/m^3
@@ -60,6 +61,24 @@ def main():
             if k < len(roots):
                 mode.append(roots[k])
     print(root_modes)
+
+    root_modes = np.array(root_modes, dtype=object)
+
+    c_L0 = [np.sqrt(1 / (r/H)**2 - B1**-2) for r in root_modes[0]]
+    c_L1 = [np.sqrt(1 / (r/H)**2 - B2**-2) for r in root_modes[1]]
+    c_L2 = [np.sqrt(1 / (r/H)**2 - B2**-2) for r in root_modes[2]]
+
+    plt.plot(freq[:len(c_L0)], c_L0, label='c_L0')
+    plt.plot(freq[:len(c_L1)], c_L1, label='c_L1')
+    plt.plot(freq[:len(c_L2)], c_L2, label='c_L2')
+
+    plt.xlabel('Frequency (Hz)')
+    plt.ylabel('c_L Values')
+    plt.legend()
+    plt.show()
+
+
+
 
 
 
