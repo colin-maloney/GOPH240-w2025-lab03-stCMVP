@@ -43,8 +43,6 @@ def main():
         atotes.append(S_max)
         n = len(atotes)
 
-        print(f"asympototes: {atotes}")    
-
         # plot the function
         ax = axs[j]  # Get the specific subplot axis
         for k, ak in enumerate(atotes):
@@ -61,7 +59,7 @@ def main():
     fig.text(0.5, 0.04, 'Zeta', ha='center', fontsize=12)
     fig.text(0.04, 0.5, 'F(zeta)', va='center', rotation='vertical', fontsize=12)
     plt.subplots_adjust(hspace=0.5)
-    plt.show() 
+    plt.savefig('figures/function_plot.png')
 
 
 if __name__ == "__main__":
