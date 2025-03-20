@@ -68,22 +68,22 @@ def main():
 
     wavelength0 = []
     for i, vel in enumerate(c_L0):
-        wavelength0.append(vel/freq[i])
+        wavelength0.append(vel/(freq[i]))
 
     wavelength1 = []
     for i, vel in enumerate(c_L1):
-        wavelength1.append(vel/freq[i+1])
+        wavelength1.append(vel/(freq[i+1]))
 
     wavelength2 = []
     for i, vel in enumerate(c_L2):
-        wavelength2.append(vel/freq[i+2])
+        wavelength2.append(vel/(freq[i+2]))
 
     plt.plot(freq[-len(wavelength0):], wavelength0, label='mode 0')
     plt.plot(freq[-len(wavelength1):], wavelength1, label='mode 1')
     plt.plot(freq[-len(wavelength2):], wavelength2, label='mode 2')
 
     plt.xlabel('Frequency (Hz)')
-    plt.ylabel('Wavelength (nm)')
+    plt.ylabel('Wavelength (m)')
     plt.title('Wavelength vs. Frequency for Modes 0, 1, 2', weight='bold')
     plt.grid()
     plt.legend()
