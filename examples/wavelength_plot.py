@@ -87,7 +87,7 @@ def main():
     plt.title('Wavelength vs. Frequency for Modes 0, 1, 2', weight='bold')
     plt.grid()
     plt.legend()
-    plt.savefig('../figures/mode_wavelength.png')
+    plt.savefig('figures/mode_wavelength.png')
 
 
 if __name__ == '__main__':
