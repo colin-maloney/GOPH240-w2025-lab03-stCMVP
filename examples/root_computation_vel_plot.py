@@ -59,7 +59,6 @@ def main():
         for k, mode in enumerate(root_modes):
             if k < len(roots):
                 mode.append(roots[k])
-    #print(root_modes)
 
     root_modes = np.array(root_modes, dtype=object)
 
